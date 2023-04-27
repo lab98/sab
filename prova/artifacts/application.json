@@ -1,0 +1,118 @@
+{
+    "hints": {
+        "create()void": {
+            "call_config": {
+                "no_op": "CREATE"
+            }
+        },
+        "auction_start(uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "bid(address,uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "auction_end()void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMQpieXRlY2Jsb2NrIDB4NjI2NTczNzQ1ZjYyNjk2NCAweDYxNzU2Mzc0Njk2ZjZlNWY2NTZlNjQgMHg3NzY5NmU2ZTY1NzIKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg0YzVjNjFiYSAvLyAiY3JlYXRlKCl2b2lkIgo9PQpibnogbWFpbl9sOAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGM4NWQ1OTM5IC8vICJhdWN0aW9uX3N0YXJ0KHVpbnQ2NCl2b2lkIgo9PQpibnogbWFpbl9sNwp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDJiMWUxMTUwIC8vICJiaWQoYWRkcmVzcyx1aW50NjQpdm9pZCIKPT0KYm56IG1haW5fbDYKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg3YzlmMjhmMSAvLyAiYXVjdGlvbl9lbmQoKXZvaWQiCj09CmJueiBtYWluX2w1CmVycgptYWluX2w1Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIGF1Y3Rpb25lbmRfMwppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sNjoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpzdG9yZSAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKYnRvaQpzdG9yZSAxCmxvYWQgMApsb2FkIDEKY2FsbHN1YiBiaWRfMgppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sNzoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpidG9pCmNhbGxzdWIgYXVjdGlvbnN0YXJ0XzEKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDg6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKPT0KJiYKYXNzZXJ0CmNhbGxzdWIgY3JlYXRlXzAKaW50Y18xIC8vIDEKcmV0dXJuCgovLyBjcmVhdGUKY3JlYXRlXzA6CnByb3RvIDAgMAp0eG4gU2VuZGVyCmdsb2JhbCBDcmVhdG9yQWRkcmVzcwo9PQovLyB1bmF1dGhvcml6ZWQKYXNzZXJ0CnJldHN1YgoKLy8gYXVjdGlvbl9zdGFydAphdWN0aW9uc3RhcnRfMToKcHJvdG8gMSAwCnR4biBTZW5kZXIKZ2xvYmFsIENyZWF0b3JBZGRyZXNzCj09Ci8vIHVuYXV0aG9yaXplZAphc3NlcnQKYnl0ZWNfMSAvLyAiYXVjdGlvbl9lbmQiCmdsb2JhbCBMYXRlc3RUaW1lc3RhbXAKZnJhbWVfZGlnIC0xCisKYXBwX2dsb2JhbF9wdXQKcmV0c3ViCgovLyBiaWQKYmlkXzI6CnByb3RvIDIgMApnbG9iYWwgTGF0ZXN0VGltZXN0YW1wCmJ5dGVjXzEgLy8gImF1Y3Rpb25fZW5kIgphcHBfZ2xvYmFsX2dldAo8CmFzc2VydApieXRlY18wIC8vICJiZXN0X2JpZCIKYXBwX2dsb2JhbF9nZXQKaW50Y18wIC8vIDAKPT0KYm56IGJpZF8yX2wzCmJ5dGVjXzAgLy8gImJlc3RfYmlkIgphcHBfZ2xvYmFsX2dldApmcmFtZV9kaWcgLTEKPgpieiBiaWRfMl9sNApieXRlY18yIC8vICJ3aW5uZXIiCmZyYW1lX2RpZyAtMgphcHBfZ2xvYmFsX3B1dApieXRlY18wIC8vICJiZXN0X2JpZCIKZnJhbWVfZGlnIC0xCmFwcF9nbG9iYWxfcHV0CmIgYmlkXzJfbDQKYmlkXzJfbDM6CmJ5dGVjXzIgLy8gIndpbm5lciIKZnJhbWVfZGlnIC0yCmFwcF9nbG9iYWxfcHV0CmJ5dGVjXzAgLy8gImJlc3RfYmlkIgpmcmFtZV9kaWcgLTEKYXBwX2dsb2JhbF9wdXQKYmlkXzJfbDQ6CnJldHN1YgoKLy8gYXVjdGlvbl9lbmQKYXVjdGlvbmVuZF8zOgpwcm90byAwIDAKdHhuIFNlbmRlcgpnbG9iYWwgQ3JlYXRvckFkZHJlc3MKPT0KLy8gdW5hdXRob3JpemVkCmFzc2VydApnbG9iYWwgTGF0ZXN0VGltZXN0YW1wCmJ5dGVjXzEgLy8gImF1Y3Rpb25fZW5kIgphcHBfZ2xvYmFsX2dldAo8CmFzc2VydApieXRlY18wIC8vICJiZXN0X2JpZCIKaW50Y18wIC8vIDAKYXBwX2dsb2JhbF9wdXQKYnl0ZWNfMiAvLyAid2lubmVyIgpwdXNoYnl0ZXMgMHggLy8gIiIKYXBwX2dsb2JhbF9wdXQKYnl0ZWNfMSAvLyAiYXVjdGlvbl9lbmQiCmludGNfMCAvLyAwCmFwcF9nbG9iYWxfcHV0CnJldHN1Yg==",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 2,
+            "num_uints": 2
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {
+                "auction_end": {
+                    "type": "uint64",
+                    "key": "auction_end",
+                    "descr": ""
+                },
+                "best_bid": {
+                    "type": "uint64",
+                    "key": "best_bid",
+                    "descr": ""
+                },
+                "owner": {
+                    "type": "bytes",
+                    "key": "owner",
+                    "descr": ""
+                },
+                "winner": {
+                    "type": "bytes",
+                    "key": "winner",
+                    "descr": ""
+                }
+            },
+            "reserved": {}
+        },
+        "local": {
+            "declared": {},
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "ReverseAuction",
+        "methods": [
+            {
+                "name": "create",
+                "args": [],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "auction_start",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "duration"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "bid",
+                "args": [
+                    {
+                        "type": "address",
+                        "name": "bidder"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "bid"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                }
+            },
+            {
+                "name": "auction_end",
+                "args": [],
+                "returns": {
+                    "type": "void"
+                }
+            }
+        ],
+        "networks": {}
+    },
+    "bare_call_config": {}
+}

@@ -1,0 +1,48 @@
+{
+    "name": "ReverseAuction",
+    "methods": [
+        {
+            "name": "create",
+            "args": [],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "auction_start",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "duration"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "bid",
+            "args": [
+                {
+                    "type": "address",
+                    "name": "bidder"
+                },
+                {
+                    "type": "uint64",
+                    "name": "bid"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "auction_end",
+            "args": [],
+            "returns": {
+                "type": "void"
+            }
+        }
+    ],
+    "networks": {}
+}

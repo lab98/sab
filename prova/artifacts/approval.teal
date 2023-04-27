@@ -1,0 +1,161 @@
+#pragma version 8
+intcblock 0 1
+bytecblock 0x626573745f626964 0x61756374696f6e5f656e64 0x77696e6e6572
+txna ApplicationArgs 0
+pushbytes 0x4c5c61ba // "create()void"
+==
+bnz main_l8
+txna ApplicationArgs 0
+pushbytes 0xc85d5939 // "auction_start(uint64)void"
+==
+bnz main_l7
+txna ApplicationArgs 0
+pushbytes 0x2b1e1150 // "bid(address,uint64)void"
+==
+bnz main_l6
+txna ApplicationArgs 0
+pushbytes 0x7c9f28f1 // "auction_end()void"
+==
+bnz main_l5
+err
+main_l5:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub auctionend_3
+intc_1 // 1
+return
+main_l6:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+store 0
+txna ApplicationArgs 2
+btoi
+store 1
+load 0
+load 1
+callsub bid_2
+intc_1 // 1
+return
+main_l7:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+callsub auctionstart_1
+intc_1 // 1
+return
+main_l8:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+==
+&&
+assert
+callsub create_0
+intc_1 // 1
+return
+
+// create
+create_0:
+proto 0 0
+txn Sender
+global CreatorAddress
+==
+// unauthorized
+assert
+retsub
+
+// auction_start
+auctionstart_1:
+proto 1 0
+txn Sender
+global CreatorAddress
+==
+// unauthorized
+assert
+bytec_1 // "auction_end"
+global LatestTimestamp
+frame_dig -1
++
+app_global_put
+retsub
+
+// bid
+bid_2:
+proto 2 0
+global LatestTimestamp
+bytec_1 // "auction_end"
+app_global_get
+<
+assert
+bytec_0 // "best_bid"
+app_global_get
+intc_0 // 0
+==
+bnz bid_2_l3
+bytec_0 // "best_bid"
+app_global_get
+frame_dig -1
+>
+bz bid_2_l4
+bytec_2 // "winner"
+frame_dig -2
+app_global_put
+bytec_0 // "best_bid"
+frame_dig -1
+app_global_put
+b bid_2_l4
+bid_2_l3:
+bytec_2 // "winner"
+frame_dig -2
+app_global_put
+bytec_0 // "best_bid"
+frame_dig -1
+app_global_put
+bid_2_l4:
+retsub
+
+// auction_end
+auctionend_3:
+proto 0 0
+txn Sender
+global CreatorAddress
+==
+// unauthorized
+assert
+global LatestTimestamp
+bytec_1 // "auction_end"
+app_global_get
+<
+assert
+bytec_0 // "best_bid"
+intc_0 // 0
+app_global_put
+bytec_2 // "winner"
+pushbytes 0x // ""
+app_global_put
+bytec_1 // "auction_end"
+intc_0 // 0
+app_global_put
+retsub
