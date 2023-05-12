@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-12T10:46:12.711Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="vuA1kdaJQoH44tHAAE1g" version="21.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-12T10:48:36.418Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="puQOn-zRAHuKiyDLSRw-" version="21.2.9" type="github">
   <diagram name="Pagina-1" id="DZtC7V4ZbZOl91H6jhJw">
     <mxGraphModel dx="838" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -65,6 +65,9 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-59" y="215" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="v9cwIrvtGYx73TXp7SWS-66" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="v9cwIrvtGYx73TXp7SWS-14">
+          <mxGeometry x="70" y="690" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="v9cwIrvtGYx73TXp7SWS-22" value="1 - auction_request" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" target="v9cwIrvtGYx73TXp7SWS-12" parent="1" source="v9cwIrvtGYx73TXp7SWS-11">
           <mxGeometry relative="1" as="geometry">
@@ -195,6 +198,31 @@
         </mxCell>
         <mxCell id="v9cwIrvtGYx73TXp7SWS-65" value="Evaluation_time&amp;nbsp;&lt;br&gt;" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;size=0.5;fillColor=#f8cecc;strokeColor=#FF1C42;strokeWidth=3;" vertex="1" parent="1">
           <mxGeometry x="610" y="650" width="20" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v9cwIrvtGYx73TXp7SWS-67" value="set_winner" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" target="v9cwIrvtGYx73TXp7SWS-66" parent="1" source="v9cwIrvtGYx73TXp7SWS-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="730" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="690" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v9cwIrvtGYx73TXp7SWS-68" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" source="v9cwIrvtGYx73TXp7SWS-66" parent="1" target="v9cwIrvtGYx73TXp7SWS-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="805" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="690" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v9cwIrvtGYx73TXp7SWS-69" value="publish_winner" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="v9cwIrvtGYx73TXp7SWS-10">
+          <mxGeometry width="60" relative="1" as="geometry">
+            <mxPoint x="600" y="810" as="sourcePoint" />
+            <mxPoint x="420" y="760" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="810" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
